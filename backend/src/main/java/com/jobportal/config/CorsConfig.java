@@ -15,7 +15,9 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(@NonNull CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOriginPatterns("*") // Allow all origins for production (Vercel)
+                        .allowedOrigins("http://localhost:3000", "http://localhost:5173",
+                                "https://job-portal-management-system-95ng.vercel.app") // Explicitly allow Vercel and
+                                                                                        // Localhost
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
