@@ -16,8 +16,10 @@ public class CorsConfig {
             public void addCorsMappings(@NonNull CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins("http://localhost:3000", "http://localhost:5173",
-                                "https://job-portal-management-system-95ng.vercel.app") // Explicitly allow Vercel and
-                                                                                        // Localhost
+                                "https://job-portal-management-system-95ng.vercel.app",
+                                "https://job-portal-management-system-ten.vercel.app") // Explicitly allow new Vercel
+                                                                                       // domain
+                                                                                       // Localhost
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
